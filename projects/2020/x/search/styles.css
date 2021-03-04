@@ -1,0 +1,326 @@
+body {
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    color: #222;
+}
+
+
+.ctr-p {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/********Navbar*********/
+
+.navbar {
+    height: 40px;
+    width: 100%;
+    direction: rtl;
+}
+
+.navbar_links {
+    width: 180px;
+    font-size: 13px;  
+}
+
+a {
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+
+/************Search Page*********/
+
+.glogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 92px;
+    max-height: 290px;
+    height: calc(100% - 560px);
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+#gslogo {
+    display: flex;
+    position: absolute;
+    font-size: 80px;
+    font-weight: normal;
+    margin-block-start: 0%;
+    margin-block-end: 0%;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.searchform {
+    padding: 20px;
+    max-height: 160px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.sf {
+    width: auto;
+    max-width: 584px;
+    position: relative;
+    margin: 0 auto;
+    padding-top: 6px;
+}
+
+#searchId {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sfTxt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sfSubm {
+    width: 88%;
+    display: flex;
+    justify-content: center;
+}
+
+.srchTxtSubm {
+    width: 28%;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font: 400 13.3333px Arial;
+    font-size: 15px;
+    margin: 24px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.srchTxtSubm:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+/*********Image Page********/
+
+.gLogoC {
+    padding-top: 109px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gImgLogo {
+    height: 92px;
+    width: 272px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bigG {
+    font-size: 85px;
+    font-weight: 400;
+    margin-block-start: 0px;
+    margin-block-end: 16px;
+    margin-inline-start: 50px;
+    margin-inline-end: 0px;
+}
+
+#imageLogo {
+    position: relative;
+    top: 35px;
+    left: -60px;
+    font: 16px/16px roboto-regular, arial, sans-serif;
+    color: darkorange;
+    white-space: nowrap;
+}
+
+#smallI {
+    font-size: 16px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    font-weight: 500;
+}
+
+#imageId {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.srchImgTxt {
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    background-color: #f8f9fa;
+    font-size: 20px;
+    line-height: 34px;
+    height: 40px !important;
+    width: 80%;
+    padding-left: 10px;
+}
+
+.srchImgTxt:hover {
+    box-shadow: 0px 0px 3px lightgray;
+    background-color: #f8f9fa;
+}
+
+.srchImgSubm {
+    width: 40%;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font: 400 13.3333px Arial;
+    font-size: 15px;
+    margin: 24px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.srchImgSubm:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+    color: #202124;
+}
+
+/********Advanced Search************/
+
+.pgt {
+    color: #D93025;
+    font-size: 20px;
+    margin: 25px 35px;
+}
+
+.searchformAdv {
+    max-width: 1140px;
+    min-width: 200px;
+    width: 96%;
+    margin: 40px 2% 0 45px;
+}
+
+#formAdv {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+.ifc {
+    width: 100%;
+    clear: both;
+}
+
+.if {
+    clear: both;
+}
+
+.ttlc {
+    display: inline-block;
+    min-width: 167px;
+    width: 16%;
+    font-size: 16px;
+    min-height: 42px;
+    font-weight: 500;
+    color: #333;
+    vertical-align: middle;
+}
+
+.lbldiv {
+    height: 30px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.ttlinputf {
+    display: inline-block;
+    min-width: 167px;
+    min-height: 41px;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.lblc {
+    display: inline-block;
+    min-width: 167px;
+    width: 16%;
+    height: 42px;
+    color: #222;
+    font-size: 13px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+
+.ip {
+    display: inline-block;
+    min-width: 167px;
+    min-height: 41px;
+    vertical-align: middle;
+    width: 50%;
+}
+
+.ipc {
+    padding-right: 16px;
+}
+
+.txtinput {
+    width: 100%;
+    text-align: left;
+    border-radius: 1px;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    font-size: 13px;
+    height: 25px;
+    padding: 1px 8px;
+    cursor: auto;
+}
+
+.ifb {
+    user-select: none;
+    line-height: 100%;
+    height: 30px;
+    min-width: 120px;
+    background-color: #4d90fe;
+    border: 1px solid #3079ed;
+    color: #fff;
+    border-radius: 2px;
+    cursor: default;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    outline: 0;
+}
+
+.ifb:hover {
+    background-color: #3680f7;
+    border: 1px solid #3056ed;
+}
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Advanced Search</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="ctr-p">
+            <div class="navbar">
+                <div class="navbar_links">
+                    <a href="index.html">Google Search</a>
+                </div>
+            </div>
+        </div>
+        <div class="pgt">
+            <label style="margin-left: 10px;">Advanced Search</label>
+        </div>
+        <div class="searchformAdv">        
+            <form action="https://www.google.com/search" id="formAdv">
+                <div class="ifc">
+                    <div class="if">
+                        <div class="ttlc">
+                            <div class="lbldiv">
+                                <span>Find pages with...</span>
+                            </div>
+                        </div>
+                        <div class="ttlinputf"></div>    
+                    </div>
+                </div>
+                <div class="ifc">
+                    <div class="if">
+                            <div class="lblc">
+                                <div class="lbldiv">
+                                    <label for="1input">all these words:</label>
+                                </div>
+                            </div>     
+                        <div class="ip">
+                            <div class="ipc">
+                                <input class="txtinput" value autofocus="autofocus" id="1input" name="as_q" type="text">
+                                <input type="hidden" name="as_qdr" value="all">
+                                <input type="hidden" name="as_occt" value="any">
+                                <input type="hidden" name="safe" value="images">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="if">
+                            <div class="lblc">
+                                <div class="lbldiv">
+                                    <label for="2input">this exact word or phrase:</label>
+                                </div>
+                            </div>
+                        <div class="ip">
+                            <div class="ipc">
+                                <input class="txtinput" id="2input" name="as_epq" type="text">
+                                <input type="hidden" name="as_qdr" value="all">
+                                <input type="hidden" name="as_occt" value="any">
+                                <input type="hidden" name="safe" value="images">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="if">
+                            <div class="lblc">
+                                <div class="lbldiv">
+                                    <label for="3input">any of these words:</label>
+                                </div>
+                            </div>
+                        <div class="ip">
+                            <div class="ipc">
+                                <input class="txtinput" id="3input" name="as_oq" type="text">
+                                <input type="hidden" name="as_qdr" value="all">
+                                <input type="hidden" name="as_occt" value="any">
+                                <input type="hidden" name="safe" value="images">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="if">
+                            <div class="lblc">
+                                <div class="lbldiv">
+                                    <label for="4input">none of these words:</label>
+                                </div>
+                            </div>
+                        <div class="ip">
+                            <div class="ipc">
+                                <input class="txtinput" id="4input" name="as_eq" type="text">
+                                <input type="hidden" name="as_qdr" value="all">
+                                <input type="hidden" name="as_occt" value="any">
+                                <input type="hidden" name="safe" value="images">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="if">
+                        <div class="lblc"></div>
+                        <div class="ip" style="text-align:right">
+                            <input class="ifb" value="Advanced Search" type="submit">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
