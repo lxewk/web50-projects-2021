@@ -4,7 +4,8 @@ document.getElementById("Lucky").addEventListener("click", function() {
 });
 
 
- 
+//  TRAILS
+
 // window.location.assign("https://www.google.com/search"); -> goes to the https , but the var lucky and var feeling aren't fetch.
 // var lucky = document.getElementsByClassName("yuRUbf")[0];
 // var feeling = lucky.getElementsByTagName("A")[0];
