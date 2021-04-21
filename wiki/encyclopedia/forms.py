@@ -14,7 +14,7 @@ class CreateEntryForm(forms.Form):
         widget=forms.TextInput(
         attrs= {
             'class': 'form-control',
-            'placeholder': '#Title',
+            'placeholder': 'Title of the page',
         }),
         required=True,
         label=''  
