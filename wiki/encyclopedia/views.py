@@ -15,7 +15,7 @@ def index(request):
             request.session["completeTitle"] = entry in (string.lower() for string in the_entries)
             request.session["sub"] = list(filter(lambda i: entry in i, (string.lower() for string in the_entries)))
 
-            # [CHECK - REMOVE FOR END]
+            # [CHECK - REMOVE FOR SUBMIT]
             print(request.session["completeTitle"])
             print(request.session["sub"])
 
@@ -68,9 +68,24 @@ def create(request):
         if form.is_valid():
             title = form.cleaned_data["title"]
             content = form.cleaned_data["content"]
-            page = util.save_entry(title, content)
-            
-            return HttpResponseRedirect(reverse("encyclopedia:index"))
+            existing_entries = util.list_entries()
+            request.session["existingEntry"] = title in (string.lower() for string in existing_entries)
+
+            # [CHECK - REMOVE FOR SUBMIT]
+            print(request.session["existingEntry"])
+            print(existing_entries)
+
+            # If title not exists, save new entry, and redirect to the new page
+            if request.session["existingEntry"] == False:
+                util.save_entry(title, content)
+                return HttpResponseRedirect(reverse("encyclopedia:get", args=[title]))
+            else:
+                number = 58
+                error = "File already exists"
+                return render(request, "encyclopedia/exception.html", {
+                    "number": number,
+                    "error": error
+                })
         else:
             # Form not valid, re-render the page with existing information
             return render(request, "encyclopedia/create.html", {
