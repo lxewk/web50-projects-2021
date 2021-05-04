@@ -23,10 +23,12 @@
                     <a href="{% url 'encyclopedia:create' %}">Create New Page</a> 
                 </div>
                 <div>
-                    Random Page
+                    <a href="{% url 'encyclopedia:randomPage' %}">Random Page</a> 
                 </div>
-                {% block nav %}
-                {% endblock %}
+                <div class="d-inline-flex p-2 bd-highlight">
+                    {% block nav %}
+                    {% endblock %}
+                </div>
             </div>
             <div class="main col-lg-10 col-md-9">
                 {% block body %}

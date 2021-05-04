@@ -12,19 +12,32 @@ class SearchEntryForm(forms.Form):
 class CreateEntryForm(forms.Form):
     title = forms.CharField(
         widget=forms.TextInput(
-        attrs= {
-            'class': 'form-control',
-            'placeholder': 'Title of the page',
-        }),
+            attrs= {
+                'class': 'form-control',
+                'placeholder': 'Title of the page',
+            }),
         required=True,
         label=''  
     )
     content = forms.CharField(
         widget=forms.Textarea(
-        attrs={
-            'class': 'form-control',
-            'placeholder': 'Enter the Markdown content of the page.'
-        }),
+            attrs={
+                'class': 'form-control',
+                'rows': '5',
+                'placeholder': 'Enter the Markdown content of the page.'
+            }),
         required=True,
         label=''
     )
+
+class EditEntryForm(forms.Form):
+    content = forms.CharField(
+        widget=forms.Textarea(
+            attrs={
+                'class': 'form-control',
+                'id': 'editContentField',
+                'rows': '5'
+            }),
+        label=''
+    )
+ 
