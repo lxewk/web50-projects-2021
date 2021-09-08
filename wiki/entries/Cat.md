@@ -1,6 +1,0 @@
-#Cat 
-```
-Fury 
-little 
-bastards
-```
