@@ -1,5 +1,0 @@
-### Candy
-
-- Toffee
-- Crush
-- ChocoTof
