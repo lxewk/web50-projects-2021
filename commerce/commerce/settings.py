@@ -120,3 +120,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Creates a media-directory for the storage of the images
+MEDIA_URL = '/media/'
+# Defines the path of the media-directory (images-file is created in models.py - Listing)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Flush out Static file
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+

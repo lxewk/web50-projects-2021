@@ -1,16 +1,30 @@
 from django import forms
-from django.db.models import fields
 from .models import Listing
+
 
 class CreateListingForm(forms.ModelForm):
     class Meta:
         model = Listing
-        fields = ('title', 'description', 'current_price', 'listing_url', 'category')
-        widget = {
-            'title': form.TextInput(attrs={'class': 'form-control'}),
-            'description': form.Textarea(attrs={'class': 'form-control', 'row': '3'}),
-            'current_price': form.Number(attrs={'class': 'form-control'}),
-            'listing_url': form.TextInput(attrs={'class': 'form-control'}),
-            'category': form.Select(attrs={'class': 'form-control'}),
-
+        fields = ['title', 'description',
+                  'starting_bid', 'image_url', 'category', 'status']
+        widgets = {
+            'title': forms.TextInput(
+				   attrs={'class': 'form-control'}),
+            'description': forms.Textarea(
+				   attrs={'class': 'form-control', 'row': '3'}),
+            'starting_bid': forms.NumberInput(
+				   attrs={'class': 'form-control'}),
+            'category': forms.Select(
+                attrs={'class': 'form-control'}),
+            'status': forms.Select(
+                attrs={'class': 'form-control'}
+            )
         }
+
+
+# Creating a form to add an listing
+# form = CreateListingForm()
+
+# Creating a form to change an existing listing
+# listing = Listing.objects.get(pk=1)
+# form = CreateListingForm(instance=listing)

@@ -1,19 +1,33 @@
-{% extends "auctions/layout.html" %}
+{% extends "auctions/layout.html" %} 
 
 {% block body %}
-    <h2>Active Listings</h2>
-    {% if listings.length %}
-        <ul>
-            {% for listing in listings %}
-                <li>
-                    <h3>{{ listing.title }}</h3>
-                    <p>{{ listing.description }}</p>
-                    <h5>{{ listing.current_price}}</h5>
-                    <img src="{% url 'listing' listing_url %}" alt="No photo">
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        No active listings at the moment
-    {% endif %}
+    <h1>Active Listings</h1>
+    {% for listing in listings %}
+        <div class="card border-info mb-3" style="max-width: 680px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{{ listing.imageUrl }}" class="card-img-top" alt="img" />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ listing.title }}</h5 class="card-title">
+                        <p class="card-text">{{ listing.description }}</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><p>Price: €{{ listing.starting_bid }}</p></li>
+                        <li class="list-group-item"><p>Created {{ listing.date_created }}</p></li> 
+                    </ul>
+                    <div class="card-body">
+                        <a href="{% url 'auctions:bid' %}" class="card-link">Place bid</a>
+                        <a href="#" class="card-link">Add to Watchlist</a>
+                        <a href="#" class="card-link">Comment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/><br/>
+    {% endfor %}
 {% endblock %}
+
+
+

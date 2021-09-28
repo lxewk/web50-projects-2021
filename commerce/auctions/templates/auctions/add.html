@@ -1,0 +1,21 @@
+{% extends "auctions/layout.html" %}
+
+{% block title %}Create Listing{% endblock %}
+
+{% block body %}
+
+    <h2>Create a new listing</h2>
+    <h6>All fields are required, except Image URL</h6>
+    <br>
+
+    <div class="form-group">
+        <!-- this form accepts media using attribute: enctype -->
+        <form action="{% url 'auctions:add' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-outline-success btn-block">Submit</button>   
+        </form>
+    </div>
+    <a href="{% url 'auctions:index' %}">View Active Listings</a>
+
+{% endblock %}

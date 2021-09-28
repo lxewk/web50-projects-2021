@@ -19,9 +19,9 @@
                 &#x1F399<i><b>New</b></i> to Auctions, register and join the fun!
             {% endif %}
         </div>
-        <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <nav class="navbar navbar-expand-sm bg-info navbar-dark">
             <!-- Brand -->
-            <a class="navbar-brand" href="{% url 'index' %}">
+            <a class="navbar-brand" href="{% url 'auctions:index' %}">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="url(#grad1)" class="bi bi-intersect" viewBox="0 0 16 16">
                     <path d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm5 10v2a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1h-2v5a2 2 0 0 1-2 2H5zm6-8V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h2V6a2 2 0 0 1 2-2h5z"/>
                     <defs>
@@ -32,20 +32,20 @@
                       </defs>
                 </svg>
             </a>
-
+            <!-- Navbar links -->
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'index' %}">Home</a>
+                            <a class="nav-link text-light" href="{% url 'auctions:index' %}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'watchlist' %}">Watchlist</a>
+                            <a class="nav-link text-light" href="{% url 'auctions:watchlist' %}">Watchlist</a>
                         </li>
                         
                         <!-- Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Fashion</a>
                                 <a class="dropdown-item" href="#">Toys</a>
@@ -56,18 +56,22 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'listing' %}">Create Listing</a>
+                            <a class="nav-link text-light" href="{% url 'auctions:add' %}">Create Listing</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="{% url 'auctions:listing' %}">My Listings</a>
                         </li>
                     
                         <li class="nav-item">
-                            <a class="nav-link" href="{% url 'logout' %}">Log Out</a>
+                            <a class="nav-link text-light" href="{% url 'auctions:logout' %}">Log Out</a>
                         </li>
                     {% else %}
                         <li class="nav-item">
-                            <a class="nav-link active" href="{% url 'login' %}">Log In</a>
+                            <a class="nav-link text-light active" href="{% url 'auctions:login' %}">Log In</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="{% url 'register' %}">Register</a>
+                            <a class="nav-link text-light active" href="{% url 'auctions:register' %}">Register</a>
                         </li>
                     {% endif %}
                 </ul>
