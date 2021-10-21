@@ -1,12 +1,12 @@
 from django import forms
-from .models import Listing
+from .models import Listing, Watchlist
 
 
 class CreateListingForm(forms.ModelForm):
     class Meta:
         model = Listing
-        fields = ['title', 'description',
-                  'starting_bid', 'image_url', 'category', 'status']
+        fields = ['title', 'description', 'starting_bid',
+                   'image_url', 'category', 'status']
         widgets = {
             'title': forms.TextInput(
 				   attrs={'class': 'form-control'}),
@@ -17,8 +17,15 @@ class CreateListingForm(forms.ModelForm):
             'category': forms.Select(
                 attrs={'class': 'form-control'}),
             'status': forms.Select(
-                attrs={'class': 'form-control'}
-            )
+                attrs={'class': 'form-control'}),
+        }
+        labels = {
+            'title': ('Title'),
+            'description': ('Description'),
+            'starting_bid': ('Starting bid'),
+            'image_url': ('Image'),
+            'category': ('Category'),
+            'status': ('Status')
         }
 
 

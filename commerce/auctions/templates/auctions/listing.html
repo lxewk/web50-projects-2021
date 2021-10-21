@@ -3,14 +3,39 @@
 {% block title %}Listing{% endblock %}
 
 {% block body %}
-
-    <h2>My listings</h2>
-    <ul>
-        {% for listing in listings %}
-            <li>{{ listing }}</li>
-        {% empty %}
-            <li>No listings.</li>
-        {% endfor %}
-    </ul>
-    
+    <div class="px-2">
+        <h3>{{ listing.title }}</h3>
+        <div class="card border-info mb-3" style="max-width: 960px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{{ listing.imageUrl }}" class="card-img-top" alt="img" />
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p class="card-text">{{ listing.description }}</p>
+                        <p class="card-text">Created {{ listing.date_created }} by TODO</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><p>Starting bid: €{{ listing.starting_bid }}</p></li> 
+                        <li class="list-group-item"><p>Current price: €{{ listing.current_price }}</p></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="{% url 'auctions:bid' %}" class="card-link">Place bid</a>
+                        <a href="{% url 'auctions:addToWatchlist' listing.id %}" class="card-link">Add to Watchlist</a>
+                        <a href="#" class="card-link">Comment</a>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <h5>Participants in this auction</h5>
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <ul class="list-group list-group-flush">
+                {% for customer in customers %}
+                    <li class="list-group-item">{{ customer }}</li>
+                {% empty %}
+                    <li class="list-group-item">No participants</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 {% endblock %}

@@ -109,9 +109,11 @@ LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
+DATETIME_FORMAT = 'd-m-Y'
+
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
 USE_TZ = True
 
@@ -121,14 +123,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 # Creates a media-directory for the storage of the images
 MEDIA_URL = '/media/'
 # Defines the path of the media-directory (images-file is created in models.py - Listing)
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Flush out Static file
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'static'),
+# )
 
 

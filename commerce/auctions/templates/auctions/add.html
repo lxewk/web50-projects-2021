@@ -3,19 +3,19 @@
 {% block title %}Create Listing{% endblock %}
 
 {% block body %}
+    <div class="px-2">
+        <h3>Create a new listing</h3>
+        <h6>All fields are required, except Image</h6>
+        <br>
 
-    <h2>Create a new listing</h2>
-    <h6>All fields are required, except Image URL</h6>
-    <br>
-
-    <div class="form-group">
-        <!-- this form accepts media using attribute: enctype -->
-        <form action="{% url 'auctions:add' %}" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-outline-success btn-block">Submit</button>   
-        </form>
+        <div class="form-group">
+            <!-- this form accepts media using attribute: enctype -->
+            <form action="{% url 'auctions:add' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-outline-success btn-block">Submit</button>   
+            </form>
+        </div>
+        <a href="{% url 'auctions:index' %}">View Active Listings</a>
     </div>
-    <a href="{% url 'auctions:index' %}">View Active Listings</a>
-
 {% endblock %}

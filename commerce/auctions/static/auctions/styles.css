@@ -1,13 +1,13 @@
 body {
-    padding: 10px;
+  background-color: rgb(55, 35, 235);
+  
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+#index-image {
+  width: 100px;
+  height: 100px;
+  border: 5pt solid #000;
+  object-fit: contain;
+  /* object-position: center; */
 }
-
-/* Home (index) page */
-
 
